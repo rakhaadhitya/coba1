@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Boruto: Two Blue Vortex</title>
+
+  <!-- Informasi SEO dasar -->
+  <meta name="description" content="Detail Comic Boruto: Two Blue Vortex - Sinopsis, karakter, jumlah episode, dan genre." />
+  <meta name="keywords" content="Boruto, Two Blue Vortex, serial, drama, action, streaming" />
+  <meta name="author" content="Rakha Adhitya" />
+
+  <!-- Open Graph untuk berbagi ke media sosial -->
+  <meta property="og:title" content="Boruto: Two Blue Vortex" />
+  <meta property="og:description" content="Detail Comic Boruto: Two Blue Vortex - Sinopsis, karakter, jumlah episode, dan genre." />
+  <meta
+    property="og:image"
+    content="https://jumpg-assets.tokyo-cdn.com/secure/title/400004/title_thumbnail_portrait_list/311926.jpg?hash=a-WU30kANpvw1ZbjCNTeMA&expires=2145884400"
+  />
+  <meta property="og:type" content="website" />
+
+  <!-- Memuat Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#121212] text-gray-400">
+
+  <!-- HEADER: Menggunakan UI Header dari Code 2 -->
+  <header class="bg-gray-800 p-4 shadow-lg">
+    <div class="container mx-auto flex justify-between text-red-400">
+      <h1 class="text-3xl font-bold">LUTIFY comic</h1>
+      <nav>
+        <ul class="flex space-x-4">
+          <li><a href="#" class="hover:text-yellow-400">Home</a></li>
+          <li><a href="#" class="hover:text-yellow-400">Anime List</a></li>
+          <li><a href="#" class="hover:text-yellow-400">Genre</a></li>
+          <li><a href="#" class="hover:text-yellow-400">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- SECTION: Welcome -->
+  <section class="text-center text-yellow-400 mt-8">
+    <h2 class="text-4xl font-semibold">Welcome to LUTIFY comic</h2>
+    <p class="mt-2 text-lg">Temukan anime favoritmu dan jelajahi dunia fantasi yang menakjubkan.</p>
+  </section>
+
+  <!-- MAIN CONTENT CONTAINER -->
+  <main class="container mx-auto mt-8 px-4">
+
+    <!-- BANNER BORUTO -->
+    <section class="relative rounded-lg overflow-hidden shadow-lg mb-8" aria-label="Poster Boruto: Two Blue Vortex">
+      <img
+        src="https://jumpg-assets.tokyo-cdn.com/secure/title/400004/title_thumbnail_portrait_list/311926.jpg?hash=a-WU30kANpvw1ZbjCNTeMA&expires=2145884400"
+        alt="Boruto: Two Blue Vortex"
+        class="w-full object-cover"
+      />
+      <div class="absolute bottom-4 left-4 bg-black bg-opacity-70 px-4 py-2 rounded">
+        <h1 class="text-xl font-bold text-white">Boruto: Two Blue Vortex</h1>
+      </div>
+    </section>
+
+    <!-- INFORMASI SERIAL BORUTO -->
+    <section aria-label="Informasi serial Boruto: Two Blue Vortex" class="text-center">
+      <h2 class="text-2xl font-bold text-white mb-2">Boruto: Two Blue Vortex</h2>
+      <div class="flex flex-wrap justify-center gap-3 text-sm text-gray-300 mb-4">
+        <span>13+</span>
+        <span>• 2023</span>
+        <span>• 16 Episode</span>
+        <span>• Action | Drama</span>
+      </div>
+
+      <!-- TOMBOL BACA -->
+      <button
+        class="bg-red-600 hover:bg-red-700 text-white py-2 px-6 rounded mb-4"
+        aria-label="Putar Boruto: Two Blue Vortex"
+        onclick="alert('Memutar Boruto: Two Blue Vortex...')"
+      >
+        Baca
+      </button>
+
+      <!-- SINOPSIS / DESKRIPSI -->
+      <p class="mb-4 text-gray-300 max-w-2xl mx-auto leading-relaxed">
+        Boruto yang melarikan diri dari Konoha bersama Sasuke. Boruto dipandang sebagai pengkhianat karena pengaruh Eida. Di tengah konflik itu, Boruto dan Sasuke menghadapi musuh baru, yaitu Pohon Ilahi Ekor Sepuluh yang berevolusi menjadi humanoid.
+      </p>
+
+      <!-- INFORMASI PENULIS & PEMAIN -->
+      <p class="mb-1 text-gray-300 max-w-2xl mx-auto">
+        <strong>Author:</strong> Masashi Kishimoto, Mikio Ikemoto
+      </p>
+      <p class="text-gray-300 max-w-2xl mx-auto">
+        <strong>Karakter:</strong> Boruto Uzumaki, Uchiha Sarada, Kawaki, Mitsuki, Uzumaki Himawari, Eida, Code, Nara Shikamaru.
+      </p>
+
+      <!-- ACTION BUTTONS -->
+      <div class="flex flex-wrap justify-center gap-4 mt-6">
+        <button
+          id="addToListBtn"
+          aria-label="Tambahkan ke daftar saya"
+          class="border border-gray-300 hover:bg-gray-700 text-white py-2 px-4 rounded flex items-center"
+        >
+          <i class="mr-2">➕</i> Daftarku
+        </button>
+        <button
+          id="rateBtn"
+          aria-label="Beri nilai pada serial ini"
+          class="border border-gray-300 hover:bg-gray-700 text-white py-2 px-4 rounded flex items-center"
+        >
+          <i class="mr-2">👍🏻</i> Beri Nilai
+        </button>
+        <button
+          id="shareBtn"
+          aria-label="Bagikan serial ini"
+          class="border border-gray-300 hover:bg-gray-700 text-white py-2 px-4 rounded flex items-center"
+        >
+          <i class="mr-2">📤</i> Bagikan
+        </button>
+        <button
+          id="downloadBtn"
+          aria-label="Unduh serial ini"
+          class="border border-gray-300 hover:bg-gray-700 text-white py-2 px-4 rounded flex items-center"
+        >
+          <i class="mr-2">⬇️</i> Unduh
+        </button>
+      </div>
+    </section>
+
+    <!-- DAFTAR EPISODE -->
+    <section aria-label="Daftar Episode" class="mt-10">
+      <h3 class="text-xl font-bold text-white text-center mb-6">Daftar Episode</h3>
+      <ul class="space-y-4 max-w-2xl mx-auto">
+
+        <!-- Episode Item Template -->
+        <!-- Ganti # pada href dengan tautan/aksi sebenarnya -->
+        <li>
+          <a
+            href="#"
+            class="flex items-center gap-3 bg-gray-800 hover:bg-gray-700 rounded p-3 transition-colors"
+            aria-label="Buka Episode 01"
+            onclick="alert('Membuka Episode 01...')"
+          >
+            <img
+              src="https://via.placeholder.com/80x50?text=E01"
+              alt="Thumbnail Episode 01"
+              class="w-20 h-auto object-cover rounded"
+            />
+            <span class="bg-red-600 text-white text-xs font-bold px-2 py-1 rounded">GRATIS</span>
+            <div>
+              <div class="font-semibold text-white">Episode 01</div>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a
+            href="#"
+            class="flex items-center gap-3 bg-gray-800 hover:bg-gray-700 rounded p-3 transition-colors"
+            aria-label="Buka Episode 02"
+            onclick="alert('Membuka Episode 02...')"
+          >
+            <img
+              src="https://via.placeholder.com/80x50?text=E02"
+              alt="Thumbnail Episode 02"
+              class="w-20 h-auto object-cover rounded"
+            />
+            <span class="bg-red-600 text-white text-xs font-bold px-2 py-1 rounded">GRATIS</span>
+            <div>
+              <div class="font-semibold text-white">Episode 02</div>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a
+            href="#"
+            class="flex items-center gap-3 bg-gray-800 hover:bg-gray-700 rounded p-3 transition-colors"
+            aria-label="Buka Episode 03"
+            onclick="alert('Membuka Episode 03...')"
+          >
+            <img
+              src="https://via.placeholder.com/80x50?text=E03"
+              alt="Thumbnail Episode 03"
+              class="w-20 h-auto object-cover rounded"
+            />
+            <span class="bg-red-600 text-white text-xs font-bold px-2 py-1 rounded">GRATIS</span>
+            <div>
+              <div class="font-semibold text-white">Episode 03</div>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a
+            href="#"
+            class="flex items-center gap-3 bg-gray-800 hover:bg-gray-700 rounded p-3 transition-colors"
+            aria-label="Buka Episode 04"
+            onclick="alert('Membuka Episode 04...')"
+          >
+            <img
+              src="https://via.placeholder.com/80x50?text=E04"
+              alt="Thumbnail Episode 04"
+              class="w-20 h-auto object-cover rounded"
+            />
+            <span class="bg-red-600 text-white text-xs font-bold px-2 py-1 rounded">GRATIS</span>
+            <div>
+              <div class="font-semibold text-white">Episode 04</div>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a
+            href="#"
+            class="flex items-center gap-3 bg-gray-800 hover:bg-gray-700 rounded p-3 transition-colors"
+            aria-label="Buka Episode 05"
+            onclick="alert('Membuka Episode 05...')"
+          >
+            <img
+              src="https://via.placeholder.com/80x50?text=E05"
+              alt="Thumbnail Episode 05"
+              class="w-20 h-auto object-cover rounded"
+            />
+            <span class="bg-red-600 text-white text-xs font-bold px-2 py-1 rounded">GRATIS</span>
+            <div>
+              <div class="font-semibold text-white">Episode 05</div>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a
+            href="#"
+            class="flex items-center gap-3 bg-gray-800 hover:bg-gray-700 rounded p-3 transition-colors"
+            aria-label="Buka Episode 06"
+            onclick="alert('Membuka Episode 06...')"
+          >
+            <img
+              src="https://via.placeholder.com/80x50?text=E06"
+              alt="Thumbnail Episode 06"
+              class="w-20 h-auto object-cover rounded"
+            />
+            <span class="bg-red-600 text-white text-xs font-bold px-2 py-1 rounded">GRATIS</span>
+            <div>
+              <div class="font-semibold text-white">Episode 06</div>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a
+            href="#"
+            class="flex items-center gap-3 bg-gray-800 hover:bg-gray-700 rounded p-3 transition-colors"
+            aria-label="Buka Episode 07"
+            onclick="alert('Membuka Episode 07...')"
+          >
+            <img
+              src="https://via.placeholder.com/80x50?text=E07"
+              alt="Thumbnail Episode 07"
+              class="w-20 h-auto object-cover rounded"
+            />
+            <span class="bg-red-600 text-white text-xs font-bold px-2 py-1 rounded">GRATIS</span>
+            <div>
+              <div class="font-semibold text-white">Episode 07</div>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a
+            href="#"
+            class="flex items-center gap-3 bg-gray-800 hover:bg-gray-700 rounded p-3 transition-colors"
+            aria-label="Buka Episode 08"
+            onclick="alert('Membuka Episode 08...')"
+          >
+            <img
+              src="https://via.placeholder.com/80x50?text=E08"
+              alt="Thumbnail Episode 08"
+              class="w-20 h-auto object-cover rounded"
+            />
+            <span class="bg-red-600 text-white text-xs font-bold px-2 py-1 rounded">GRATIS</span>
+            <div>
+              <div class="font-semibold text-white">Episode 08</div>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a
+            href="#"
+            class="flex items-center gap-3 bg-gray-800 hover:bg-gray-700 rounded p-3 transition-colors"
+            aria-label="Buka Episode 09"
+            onclick="alert('Membuka Episode 09...')"
+          >
+            <img
+              src="https://via.placeholder.com/80x50?text=E09"
+              alt="Thumbnail Episode 09"
+              class="w-20 h-auto object-cover rounded"
+            />
+            <span class="bg-red-600 text-white text-xs font-bold px-2 py-1 rounded">GRATIS</span>
+            <div>
+              <div class="font-semibold text-white">Episode 09</div>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a
+            href="#"
+            class="flex items-center gap-3 bg-gray-800 hover:bg-gray-700 rounded p-3 transition-colors"
+            aria-label="Buka Episode 10"
+            onclick="alert('Membuka Episode 10...')"
+          >
+            <img
+              src="https://via.placeholder.com/80x50?text=E10"
+              alt="Thumbnail Episode 10"
+              class="w-20 h-auto object-cover rounded"
+            />
+            <span class="bg-red-600 text-white text-xs font-bold px-2 py-1 rounded">GRATIS</span>
+            <div>
+              <div class="font-semibold text-white">Episode 10</div>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a
+            href="#"
+            class="flex items-center gap-3 bg-gray-800 hover:bg-gray-700 rounded p-3 transition-colors"
+            aria-label="Buka Episode 11"
+            onclick="alert('Membuka Episode 11...')"
+          >
+            <img
+              src="https://via.placeholder.com/80x50?text=E11"
+              alt="Thumbnail Episode 11"
+              class="w-20 h-auto object-cover rounded"
+            />
+            <span class="bg-red-600 text-white text-xs font-bold px-2 py-1 rounded">GRATIS</span>
+            <div>
+              <div class="font-semibold text-white">Episode 11</div>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a
+            href="#"
+            class="flex items-center gap-3 bg-gray-800 hover:bg-gray-700 rounded p-3 transition-colors"
+            aria-label="Buka Episode 12"
+            onclick="alert('Membuka Episode 12...')"
+          >
+            <img
+              src="https://via.placeholder.com/80x50?text=E12"
+              alt="Thumbnail Episode 12"
+              class="w-20 h-auto object-cover rounded"
+            />
+            <span class="bg-red-600 text-white text-xs font-bold px-2 py-1 rounded">GRATIS</span>
+            <div>
+              <div class="font-semibold text-white">Episode 12</div>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a
+            href="#"
+            class="flex items-center gap-3 bg-gray-800 hover:bg-gray-700 rounded p-3 transition-colors"
+            aria-label="Buka Episode 13"
+            onclick="alert('Membuka Episode 13...')"
+          >
+            <img
+              src="https://via.placeholder.com/80x50?text=E13"
+              alt="Thumbnail Episode 13"
+              class="w-20 h-auto object-cover rounded"
+            />
+            <span class="bg-red-600 text-white text-xs font-bold px-2 py-1 rounded">GRATIS</span>
+            <div>
+              <div class="font-semibold text-white">Episode 13</div>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a
+            href="#"
+            class="flex items-center gap-3 bg-gray-800 hover:bg-gray-700 rounded p-3 transition-colors"
+            aria-label="Buka Episode 14"
+            onclick="alert('Membuka Episode 14...')"
+          >
+            <img
+              src="https://via.placeholder.com/80x50?text=E14"
+              alt="Thumbnail Episode 14"
+              class="w-20 h-auto object-cover rounded"
+            />
+            <span class="bg-red-600 text-white text-xs font-bold px-2 py-1 rounded">GRATIS</span>
+            <div>
+              <div class="font-semibold text-white">Episode 14</div>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a
+            href="#"
+            class="flex items-center gap-3 bg-gray-800 hover:bg-gray-700 rounded p-3 transition-colors"
+            aria-label="Buka Episode 15"
+            onclick="alert('Membuka Episode 15...')"
+          >
+            <img
+              src="https://via.placeholder.com/80x50?text=E15"
+              alt="Thumbnail Episode 15"
+              class="w-20 h-auto object-cover rounded"
+            />
+            <span class="bg-red-600 text-white text-xs font-bold px-2 py-1 rounded">GRATIS</span>
+            <div>
+              <div class="font-semibold text-white">Episode 15</div>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a
+            href="#"
+            class="flex items-center gap-3 bg-gray-800 hover:bg-gray-700 rounded p-3 transition-colors"
+            aria-label="Buka Episode 16"
+            onclick="alert('Membuka Episode 16...')"
+          >
+            <img
+              src="https://via.placeholder.com/80x50?text=E16"
+              alt="Thumbnail Episode 16"
+              class="w-20 h-auto object-cover rounded"
+            />
+            <span class="bg-red-600 text-white text-xs font-bold px-2 py-1 rounded">GRATIS</span>
+            <div>
+              <div class="font-semibold text-white">Episode 16</div>
+            </div>
+          </a>
+        </li>
+
+      </ul>
+    </section>
+  </main>
+
+  <!-- FOOTER: Menggunakan gaya mirip Code 2 -->
+  <footer class="bg-gray-800 mt-10 p-4 text-center text-gray-400">
+    <p>© 2025 Website Comic/Manga. Dibuat oleh Rakha Adhitya.</p>
+  </footer>
+
+  <!-- Skrip Interaksi Sederhana (tetap dari Code 1) -->
+  <script>
+    // Tombol "Daftarku"
+    const addToListBtn = document.getElementById('addToListBtn');
+    addToListBtn.addEventListener('click', () => {
+      alert('Serial telah ditambahkan ke daftar Anda!');
+    });
+
+    // Tombol "Beri Nilai"
+    const rateBtn = document.getElementById('rateBtn');
+    rateBtn.addEventListener('click', () => {
+      alert('Terima kasih sudah memberi nilai!');
+    });
+
+    // Tombol "Bagikan"
+    const shareBtn = document.getElementById('shareBtn');
+    shareBtn.addEventListener('click', () => {
+      alert('Bagikan link ini ke media sosial Anda!');
+    });
+
+    // Tombol "Unduh"
+    const downloadBtn = document.getElementById('downloadBtn');
+    downloadBtn.addEventListener('click', () => {
+      alert('Mengunduh...');
+    });
+  </script>
+</body>
+</html>

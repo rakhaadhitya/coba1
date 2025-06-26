@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- Informasi SEO dasar -->
+  <meta name="description" content="Detail serial Bad Guys: Vile City - Sinopsis, pemain, jumlah episode, dan genre." />
+  <meta name="keywords" content="Bad Guys, Vile City, serial, drama, action, streaming" />
+  <meta name="author" content="Nama Anda" />
+
+  <!-- Open Graph untuk berbagi ke media sosial -->
+  <meta property="og:title" content="Bad Guys: Vile City" />
+  <meta property="og:description" content="Detail serial Bad Guys: Vile City - Sinopsis, pemain, jumlah episode, dan genre." />
+  <meta
+    property="og:image"
+    content="https://upload.wikimedia.org/wikipedia/en/8/8d/Bad_Guys_Vile_City.jpg" 
+    <!-- Ganti URL poster jika punya sumber lain -->
+  />
+  <meta property="og:type" content="website" />
+
+  <!-- Judul halaman -->
+  <title>Bad Guys: Vile City</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Font Awesome untuk ikon (opsional) -->
+  <script
+    src="https://kit.fontawesome.com/a076d05399.js"
+    crossorigin="anonymous"
+  ></script>
+
+  <style>
+    /* RESET & GLOBAL STYLES */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    body {
+      background-color: #121212;
+      color: #ffffff;
+      line-height: 1.5;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* KONTAINER UTAMA */
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* HEADER */
+    header {
+      text-align: center;
+      padding: 15px 0;
+      border-bottom: 2px solid #333;
+      margin-bottom: 20px;
+    }
+
+    /* NAVIGATION */
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 10px 0;
+    }
+
+    nav li a {
+      padding: 8px;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+
+    nav li a:hover {
+      background: #333;
+    }
+
+    /* BANNER */
+    .banner {
+      position: relative;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+
+    .banner img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .overlay {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      background: rgba(0, 0, 0, 0.7);
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    .overlay h1 {
+      font-size: 28px;
+      font-weight: bold;
+      margin: 0;
+    }
+
+    /* MOVIE/DRAMA INFO */
+    .movie-info {
+      text-align: center;
+      margin-top: 15px;
+    }
+
+    .movie-title {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .details {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      font-size: 14px;
+      color: #bbb;
+      margin-bottom: 15px;
+    }
+
+    /* TOMBOL PUTAR */
+    .play-button {
+      background: #e50914;
+      color: #fff;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 10px;
+      display: inline-block;
+      width: 100%;
+      text-align: center;
+      transition: background 0.3s;
+    }
+
+    .play-button:hover {
+      background: #c40812;
+    }
+
+    /* DESCRIPTION / SINOPSIS */
+    .description {
+      margin-top: 15px;
+      font-size: 14px;
+      color: #ccc;
+      text-align: justify;
+    }
+
+    .info-text {
+      font-size: 14px;
+      color: #bbb;
+      margin-top: 5px;
+      text-align: justify;
+    }
+
+    /* ACTION BUTTONS */
+    .actions {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 20px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .actions button {
+      background: none;
+      border: 1px solid #bbb;
+      padding: 8px 12px;
+      border-radius: 5px;
+      color: #fff;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .actions button i {
+      font-size: 18px;
+      margin-right: 5px;
+    }
+
+    .actions button:hover {
+      background: #333;
+    }
+
+    /* EPISODE LIST */
+    .episodes {
+      margin-top: 30px;
+    }
+
+    .episodes h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    .episode-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .episode-list li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: #222;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+    }
+
+    .episode-label {
+      background: #e50914;
+      color: #fff;
+      padding: 3px 6px;
+      border-radius: 3px;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    .episode-info {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .episode-number {
+      font-weight: bold;
+      margin-bottom: 2px;
+    }
+
+    .episode-duration {
+      font-size: 14px;
+      color: #bbb;
+    }
+
+    /* FOOTER */
+    footer {
+      margin-top: 40px;
+      text-align: center;
+      font-size: 14px;
+      color: #777;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 600px) {
+      .movie-title {
+        font-size: 20px;
+      }
+
+      .play-button {
+        font-size: 14px;
+      }
+
+      .actions {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .episode-list li {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- HEADER -->
+    <header>
+      <nav aria-label="Navigasi Utama">
+        <ul>
+          <li><a href="#">Beranda</a></li>
+          <li><a href="#">Film</a></li>
+          <li><a href="#">Serial</a></li>
+          <li><a href="#">Kontak</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main id="main-content">
+      <!-- BANNER -->
+      <section class="banner" aria-label="Poster Bad Guys: Vile City">
+        <!-- Ganti URL gambar dengan poster lain jika diinginkan -->
+        <img
+          src="https://upload.wikimedia.org/wikipedia/en/8/8d/Bad_Guys_Vile_City.jpg"
+          alt="Poster serial Bad Guys: Vile City"
+        />
+        <div class="overlay">
+          <h1>BAD GUYS: VILE CITY</h1>
+        </div>
+      </section>
+
+      <!-- SERIAL INFO -->
+      <section class="movie-info" aria-label="Informasi serial Bad Guys: Vile City">
+        <h2 class="movie-title">Bad Guys: Vile City</h2>
+        <div class="details">
+          <span>13+</span>
+          <span>• 2017</span>
+          <span>• 16 Episode</span>
+          <span>• Action | Drama</span>
+        </div>
+
+        <!-- TOMBOL PUTAR -->
+        <button
+          class="play-button"
+          aria-label="Putar Bad Guys: Vile City"
+        >
+          ▶ Putar
+        </button>
+
+        <!-- SINOPSIS / DESKRIPSI -->
+        <p class="description">
+          Tim anti-korupsi yang tak biasa dibentuk untuk membasmi para pejabat korup
+          di aparat. Mereka melawan kejahatan dengan cara ekstrem dan penuh risiko.
+        </p>
+
+        <!-- INFORMASI PENULIS & PEMAIN -->
+        <p class="info-text">
+          <strong>Penulis / Sutradara:</strong> Han Dong Hwa
+        </p>
+        <p class="info-text">
+          <strong>Pemain:</strong> Park Joong-hoon, Kim Mu-yeol, Joo Jin-mo,
+          Yang Ik-joon, dan masih banyak lagi.
+        </p>
+
+        <!-- ACTION BUTTONS -->
+        <div class="actions">
+          <button aria-label="Tambahkan ke daftar saya">
+            <i class="fas fa-plus"></i> Daftarku
+          </button>
+          <button aria-label="Beri nilai pada serial ini">
+            <i class="fas fa-thumbs-up"></i> Beri Nilai
+          </button>
+          <button aria-label="Bagikan serial ini">
+            <i class="fas fa-share"></i> Bagikan
+          </button>
+          <button aria-label="Unduh serial ini">
+            <i class="fas fa-download"></i> Unduh
+          </button>
+        </div>
+      </section>
+
+      <!-- DAFTAR EPISODE -->
+      <section class="episodes" aria-label="Daftar Episode">
+        <h3>Daftar Episode</h3>
+        <ul class="episode-list">
+          <!-- Contoh Episode 1 - 2 (GRATIS) -->
+          <li>
+            <span class="episode-label">GRATIS</span>
+            <div class="episode-info">
+              <div class="episode-number">Episode 01</div>
+              <div class="episode-duration">1:03:06</div>
+            </div>
+          </li>
+          <li>
+            <span class="episode-label">GRATIS</span>
+            <div class="episode-info">
+              <div class="episode-number">Episode 02</div>
+              <div class="episode-duration">1:03:50</div>
+            </div>
+          </li>
+          <!-- Sisanya contoh Premium (tanpa label atau bisa diberi label "Premium") -->
+          <li>
+            <!-- <span class="episode-label">PREMIUM</span> -->
+            <div class="episode-info">
+              <div class="episode-number">Episode 03</div>
+              <div class="episode-duration">1:04:31</div>
+            </div>
+          </li>
+          <li>
+            <div class="episode-info">
+              <div class="episode-number">Episode 04</div>
+              <div class="episode-duration">1:05:06</div>
+            </div>
+          </li>
+          <li>
+            <div class="episode-info">
+              <div class="episode-number">Episode 05</div>
+              <div class="episode-duration">1:05:06</div>
+            </div>
+          </li>
+          <li>
+            <div class="episode-info">
+              <div class="episode-number">Episode 06</div>
+              <div class="episode-duration">1:05:05</div>
+            </div>
+          </li>
+          <li>
+            <div class="episode-info">
+              <div class="episode-number">Episode 07</div>
+              <div class="episode-duration">1:02:34</div>
+            </div>
+          </li>
+          <li>
+            <div class="episode-info">
+              <div class="episode-number">Episode 08</div>
+              <div class="episode-duration">1:02:35</div>
+            </div>
+          </li>
+          <li>
+            <div class="episode-info">
+              <div class="episode-number">Episode 09</div>
+              <div class="episode-duration">1:01:20</div>
+            </div>
+          </li>
+          <li>
+            <div class="episode-info">
+              <div class="episode-number">Episode 10</div>
+              <div class="episode-duration">1:01:00</div>
+            </div>
+          </li>
+          <li>
+            <div class="episode-info">
+              <div class="episode-number">Episode 11</div>
+              <div class="episode-duration">1:02:00</div>
+            </div>
+          </li>
+          <li>
+            <div class="episode-info">
+              <div class="episode-number">Episode 12</div>
+              <div class="episode-duration">1:02:00</div>
+            </div>
+          </li>
+          <li>
+            <div class="episode-info">
+              <div class="episode-number">Episode 13</div>
+              <div class="episode-duration">1:02:00</div>
+            </div>
+          </li>
+          <li>
+            <div class="episode-info">
+              <div class="episode-number">Episode 14</div>
+              <div class="episode-duration">1:02:00</div>
+            </div>
+          </li>
+          <li>
+            <div class="episode-info">
+              <div class="episode-number">Episode 15</div>
+              <div class="episode-duration">1:02:00</div>
+            </div>
+          </li>
+          <li>
+            <div class="episode-info">
+              <div class="episode-number">Episode 16</div>
+              <div class="episode-duration">1:02:00</div>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      <p>© 2025 Website Film/Serial. Dibuat oleh Nama Anda.</p>
+    </footer>
+  </div><!-- /container -->
+</body>
+</html>

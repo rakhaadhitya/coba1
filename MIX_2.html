@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LUTIFY Comic</title>
+  <style>
+    :root {
+      --bg-color: #333333;
+      --text-color: #fd4646;
+      --header-bg: #202938;
+      --menu-bg: #3d506f;
+      --search-box-bg: #545454;
+      --card-bg: #3d506f;
+      --accent-color: #f5716e;
+    }
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+    a { text-decoration: none; color: inherit; cursor: pointer; }
+    header { background-color: var(--header-bg); padding: 16px 0; box-shadow: 0 2px 4px rgba(0,0,0,0.5); }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 16px; }
+    .nav-container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+    nav ul { list-style: none; display: flex; gap: 16px; flex-wrap: wrap; }
+    nav a:hover { color: var(--accent-color); }
+    .accent { color: var(--accent-color); }
+    h1 { font-size: 2rem; font-weight: bold; }
+    h2 { font-size: 2.5rem; font-weight: 600; }
+    h3 { font-size: 1.25rem; font-weight: bold; margin-top: 8px; }
+    p { margin-top: 8px; font-size: 1rem; }
+    main { margin-top: 32px; }
+    .text-center { text-align: center; }
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px; margin-top: 32px; }
+    .card { background-color: var(--card-bg); padding: 16px; border-radius: 16px; box-shadow: 0 4px 6px rgba(0,0,0,0.3); transition: transform 0.2s ease; }
+    .card:hover { transform: translateY(-5px); }
+    .card img { width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 12px; }
+    footer { margin-top: 40px; padding: 16px; text-align: center; box-shadow: inset 0 2px 4px rgba(0,0,0,0.3); font-size: 0.9rem; }
+    .search-container { margin-left: 16px; }
+    #search-input { padding: 8px 12px; border: none; border-radius: 8px; background-color: var(--search-box-bg); color: var(--text-color); font-size: 1rem; width: 200px; transition: width 0.3s ease; }
+    #search-input:focus { outline: none; width: 280px; }
+    /* Detail page styles override */
+    .detail-container { display: none; padding: 20px; max-width: 800px; margin: 0 auto; background: #121212; }
+    .banner { position: relative; border-radius: 10px; overflow: hidden; margin-bottom: 20px; }
+    .banner img { width: 100%; border-radius: 10px; }
+    .overlay { position: absolute; bottom: 20px; left: 20px; background: rgba(0,0,0,0.7); padding: 10px; border-radius: 5px; }
+    .overlay h1 { font-size: 28px; font-weight: bold; margin: 0; color: #fff; }
+    .movie-info { text-align: center; margin-top: 15px; color: #fff; }
+    .details { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; font-size: 14px; color: #bbb; margin-bottom: 15px; }
+    .play-button { background: #e50914; color: #fff; padding: 12px 20px; border: none; border-radius: 5px; font-size: 16px; cursor: pointer; margin-top: 10px; display: inline-block; width: 100%; text-align: center; transition: background 0.3s; }
+    .play-button:hover { background: #c40812; }
+    .description, .info-text { font-size: 14px; color: #ccc; text-align: justify; margin-top: 15px; }
+    .actions { display: flex; justify-content: space-around; margin-top: 20px; flex-wrap: wrap; gap: 10px; }
+    .actions button { background: none; border: 1px solid #bbb; padding: 8px 12px; border-radius: 5px; color: #fff; font-size: 14px; cursor: pointer; transition: background 0.3s; }
+    .actions button i { font-size: 18px; margin-right: 5px; }
+    .actions button:hover { background: #333; }
+    .episodes { margin-top: 30px; }
+    .episodes h3 { font-size: 20px; margin-bottom: 10px; text-align: center; color: #fff; }
+    .episode-list { list-style: none; margin: 0; padding: 0; }
+    .episode-list li { background: #222; margin-bottom: 10px; border-radius: 5px; overflow: hidden; }
+    .episode-link { display: flex; align-items: center; gap: 10px; padding: 10px; color: #fff; transition: background 0.3s; }
+    .episode-link:hover { background: #333; }
+    .episode-thumbnail { width: 80px; border-radius: 5px; object-fit: cover; flex-shrink: 0; }
+    .episode-label { background: #e50914; color: #fff; padding: 3px 6px; border-radius: 3px; font-size: 12px; font-weight: bold; text-transform: uppercase; flex-shrink: 0; }
+    .episode-number { font-weight: bold; font-size: 15px; margin-bottom: 2px; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav-container">
+      <h1 class="accent">LUTIFY Comic</h1>
+      <nav>
+        <ul>
+          <li><a class="nav-home">Beranda</a></li>
+          <li><a href="#">Daftar Anime</a></li>
+          <li><a href="#">Genre</a></li>
+          <li><a href="#">Kontak</a></li>
+        </ul>
+      </nav>
+      <div class="search-container">
+        <input type="text" id="search-input" placeholder="Cari anime..." />
+      </div>
+    </div>
+  </header>
+
+  <!-- Halaman Beranda -->
+  <main id="homePage">
+    <section class="text-center">
+      <h2 class="accent">Selamat Datang di LUTIFY Comic</h2>
+      <p>Jelajahi dunia fantasi yang luar biasa dan temukan anime favoritmu di sini.</p>
+    </section>
+    <section class="cards" id="cards-container">
+      <!-- Contoh kartu Boruto -->
+      <div class="card" data-detail="borutoDetail">
+        <img src="gambar/boruto two vortex.jpg" alt="Boruto: Two Blue Vortex" />
+        <h3 class="accent">Boruto: Two Blue Vortex</h3>
+        <p>Boruto melarikan diri dari Konoha bersama Sasuke. Mereka menghadapi Pohon Ilahi yang berubah menjadi bentuk humanoid.</p>
+      </div>
+      <!-- Tambahkan card lain sesuai kebutuhan -->
+    </section>
+  </main>
+
+  <!-- Halaman Detail -->
+  <div class="detail-container" id="borutoDetail">
+    <section class="banner" aria-label="Poster Boruto: Two Blue Vortex">
+      <img src="https://jumpg-assets.tokyo-cdn.com/secure/title/400004/title_thumbnail_portrait_list/311926.jpg" alt="Boruto: Two Blue Vortex" />
+      <div class="overlay"><h1>Boruto: Two Blue Vortex</h1></div>
+    </section>
+    <section class="movie-info">
+      <h2 class="movie-title">Boruto: Two Blue Vortex</h2>
+      <div class="details"><span>13+</span><span>• 2023</span><span>• 16 Episode</span><span>• Action | Drama</span></div>
+      <button class="play-button" onclick="alert('Memutar Boruto: Two Blue Vortex...')">Baca</button>
+      <p class="description">Boruto yang melarikan diri dari Konoha bersama Sasuke. Boruto dipandang sebagai pengkhianat karena pengaruh Eida.</p>
+      <p class="info-text"><strong>Author:</strong> Masashi Kishimoto, Mikio Ikemoto</p>
+      <p class="info-text"><strong>Karakter:</strong> Boruto Uzumaki, Uchiha Sarada, Kawaki, Mitsuki, Uzumaki Himawari, Eida, Code.</p>
+      <div class="actions">
+        <button onclick="alert('Serial telah ditambahkan ke daftar Anda!')"><i class="fas fa-plus"></i> Daftarku</button>
+        <button onclick="alert('Terima kasih sudah memberi nilai!')"><i class="fas fa-thumbs-up"></i> Beri Nilai</button>
+        <button onclick="alert('Bagikan link ini ke media sosial Anda!')"><i class="fas fa-share"></i> Bagikan</button>
+        <button onclick="alert('Mengunduh...')"><i class="fas fa-download"></i> Unduh</button>
+      </div>
+    </div>
+
+  <footer><p>&copy; 2025 LUTIFY Comic. Seluruh hak cipta dilindungi.</p></footer>
+
+  <script>
+    // Navigasi Home
+    document.querySelectorAll('.nav-home').forEach(el => {
+      el.addEventListener('click', () => {
+        document.getElementById('homePage').style.display = 'block';
+        document.querySelectorAll('.detail-container').forEach(d => d.style.display = 'none');
+      });
+    });
+    // Tampilkan detail Boruto
+    document.querySelector('[data-detail="borutoDetail"]').addEventListener('click', () => {
+      document.getElementById('homePage').style.display = 'none';
+      document.getElementById('borutoDetail').style.display = 'block';
+    });
+    // Pencarian pada beranda
+    document.getElementById('search-input').addEventListener('input', function() {
+      const term = this.value.trim().toLowerCase();
+      let found = false;
+      document.querySelectorAll('.card').forEach(card => {
+        const title = card.querySelector('h3').textContent.toLowerCase();
+        const match = title.includes(term);
+        card.style.display = match ? '' : 'none';
+        if (match) found = true;
+      });
+    });
+  </script>
+</body>
+</html>

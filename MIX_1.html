@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LUTIFY Comic</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet" />
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    :root {
+      --bg-color: #121212;
+      --text-main: #ffffff;
+      --text-accent: #f87171;
+      --header-bg: #2d2d2d;
+      --accent-btn: #e50914;
+      --accent-hover: #c40812;
+      --card-bg: #3d506f;
+      --menu-hover: #facc15;
+      --detail-bg: #222;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; font-family:'Roboto',sans-serif; }
+    body { background: var(--bg-color); color: var(--text-main); }
+    a { color: inherit; text-decoration: none; }
+    header { background: var(--header-bg); padding: 1rem; box-shadow:0 10px 15px rgba(0,0,0,0.3); }
+    .container { max-width:1200px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; }
+    .logo { font-size:1.875rem; font-weight:700; color: var(--text-accent); }
+    nav ul { display:flex; gap:1rem; }
+    nav li a:hover { color: var(--menu-hover); cursor:pointer; }
+    main { max-width:1200px; margin:2rem auto; padding:0 1rem; }
+    /* Home Page */
+    #homePage .cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:1.5rem; }
+    #homePage .card { background: var(--card-bg); border-radius:16px; overflow:hidden; box-shadow:0 4px 6px rgba(0,0,0,0.3); transition:transform .2s; cursor:pointer; }
+    #homePage .card:hover { transform: translateY(-5px); }
+    #homePage .card img { width:100%; height:200px; object-fit:cover; }
+    #homePage .card h3 { margin:0.5rem 1rem; color: var(--text-accent); }
+    #homePage .card p { margin:0 1rem 1rem; font-size:0.9rem; color:#ccc; }
+    /* Detail Page */
+    #detailPage { display:none; }
+    .banner { position:relative; border-radius:10px; overflow:hidden; margin-bottom:20px; }
+    .banner img { width:100%; display:block; }
+    .overlay { position:absolute; bottom:20px; left:20px; background:rgba(0,0,0,0.7); padding:10px; border-radius:5px; }
+    .overlay h1 { font-size:28px; font-weight:bold; }
+    .movie-info { text-align:center; margin-top:1rem; }
+    .movie-title { font-size:24px; font-weight:bold; }
+    .details { display:flex; flex-wrap:wrap; justify-content:center; gap:10px; color:#bbb; font-size:14px; margin:10px 0; }
+    .play-button { background:var(--accent-btn); color:#fff; padding:12px 20px; border:none; border-radius:5px; font-size:16px; cursor:pointer; transition:background .3s; }
+    .play-button:hover { background:var(--accent-hover); }
+    .description, .info-text { font-size:14px; color:#ccc; text-align:justify; margin:10px 0; }
+    .actions { display:flex; flex-wrap:wrap; justify-content:center; gap:10px; margin-top:1rem; }
+    .actions button { background:none; border:1px solid #bbb; border-radius:5px; padding:8px 12px; color:#fff; font-size:14px; cursor:pointer; display:flex; align-items:center; gap:5px; transition:background .3s; }
+    .actions button:hover { background:#333; }
+    .episodes { margin-top:2rem; }
+    .episode-list { list-style:none; }
+    .episode-list li { background: var(--detail-bg); border-radius:5px; margin-bottom:10px; }
+    .episode-link { display:flex; align-items:center; gap:10px; padding:10px; color:#fff; }
+    .episode-link:hover { background:#333; }
+    .episode-thumbnail { width:80px; border-radius:5px; object-fit:cover; }
+    .episode-label { background:var(--accent-btn); color:#fff; padding:3px 6px; border-radius:3px; font-size:12px; font-weight:bold; }
+    .episode-number { font-size:15px; font-weight:bold; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="logo">LUTIFY Comic</div>
+      <nav>
+        <ul>
+          <li><a id="navHome">Beranda</a></li>
+          <li><a href="#">Daftar Anime</a></li>
+          <li><a href="#">Genre</a></li>
+          <li><a href="#">Kontak</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <!-- Halaman Beranda -->
+    <section id="homePage">
+      <h2 style="text-align:center; color: var(--text-accent);">Selamat Datang di LUTIFY Comic</h2>
+      <p style="text-align:center; color:#ccc; margin-bottom:2rem;">Jelajahi dunia fantasi yang luar biasa dan temukan anime favoritmu di sini.</p>
+      <div class="cards">
+        <!-- Contoh Card -->
+        <div class="card" onclick="showDetail()">
+          <img src="https://jumpg-assets.tokyo-cdn.com/secure/title/400004/title_thumbnail_portrait_list/311926.jpg" alt="Boruto: Two Blue Vortex" />
+          <h3>Boruto: Two Blue Vortex</h3>
+          <p>Boruto melarikan diri dari Konoha bersama Sasuke. Mereka menghadapi Pohon Ilahi yang berubah menjadi bentuk humanoid.</p>
+        </div>
+        <!-- Tambahkan card lain sesuai kebutuhan -->
+      </div>
+    </section>
+    <!-- Halaman Detail Comic -->
+    <section id="detailPage">
+      <div class="banner">
+        <img src="https://jumpg-assets.tokyo-cdn.com/secure/title/400004/title_thumbnail_portrait_list/311926.jpg" alt="Boruto: Two Blue Vortex" />
+        <div class="overlay"><h1>Boruto: Two Blue Vortex</h1></div>
+      </div>
+      <div class="movie-info">
+        <div class="movie-title">Boruto: Two Blue Vortex</div>
+        <div class="details"><span>13+</span><span>• 2023</span><span>• 16 Episode</span><span>• Action | Drama</span></div>
+        <button class="play-button" onclick="alert('Memutar Boruto...')">Baca</button>
+        <p class="description">Boruto yang melarikan diri dari Konoha bersama Sasuke...</p>
+        <p class="info-text"><strong>Author:</strong> Masashi Kishimoto, Mikio Ikemoto</p>
+        <p class="info-text"><strong>Karakter:</strong> Boruto Uzumaki, Sarada, Kawaki, Mitsuki, Himawari, Eida, Code, Shikamaru.</p>
+        <div class="actions">
+          <button onclick="alert('Ditambahkan ke Daftarku')"><i class="fas fa-plus"></i>Daftarku</button>
+          <button onclick="alert('Terima kasih memberi nilai')"><i class="fas fa-thumbs-up"></i>Beri Nilai</button>
+          <button onclick="alert('Bagikan link')"><i class="fas fa-share"></i>Bagikan</button>
+          <button onclick="alert('Mengunduh...')"><i class="fas fa-download"></i>Unduh</button>
+        </div>
+      </div>
+      <div class="episodes">
+        <h3 style="text-align:center; color:#ccc;">Daftar Episode</h3>
+        <ul class="episode-list">
+          <!-- Contoh Episode -->
+          <li><a href="#" class="episode-link"><img src="https://via.placeholder.com/80x50?text=E01" class="episode-thumbnail" /><span class="episode-label">GRATIS</span><div class="episode-number">Episode 01</div></a></li>
+          <!-- Tambah episode lainnya -->
+        </ul>
+      </div>
+    </section>
+  </main>
+  <script>
+    const navHome = document.getElementById('navHome');
+    const homeSection = document.getElementById('homePage');
+    const detailSection = document.getElementById('detailPage');
+    navHome.addEventListener('click', () => {
+      homeSection.style.display = 'block';
+      detailSection.style.display = 'none';
+    });
+    function showDetail() {
+      homeSection.style.display = 'none';
+      detailSection.style.display = 'block';
+      window.scrollTo(0,0);
+    }
+  </script>
+</body>
+</html>
